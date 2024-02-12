@@ -1,5 +1,14 @@
 function jugar() {
   let cantidadJuegos = parseInt(prompt("¿Cuantas veces quieres jugar?"));
+  if (!Number(cantidadJuegos) || cantidadJuegos <= 0) {
+    alert("Por favor, ingresa una cantidad de juegos válida");
+  }
+  while (!Number(cantidadJuegos) || cantidadJuegos <= 0) {
+    cantidadJuegos = parseInt(prompt("¿Cuántas veces quieres jugar?"));
+    if (!Number(cantidadJuegos) || cantidadJuegos <= 0) {
+      alert("Por favor, ingresa una cantidad de juegos válida");
+    }
+  }
   let opciones = ["piedra", "papel", "tijera"];
   let resultadoRonda = "";
   let resultadoFinal = "";
@@ -34,17 +43,19 @@ function jugar() {
       resultado = "La computadora gana!";
     }
     /* Alert de resultado inmediato de partida */
-    alert("Juego: " +
-      (i + 1) +
-      ". Seleccionaste: " +
-      opcionJugador +
-      ". La Computadora jugó: " +
-      opcionComputadora +
-      ". " +
-      "\n" +
-      resultado +
-      "." +
-      "\n");
+    alert(
+      "Juego: " +
+        (i + 1) +
+        ". Seleccionaste: " +
+        opcionJugador +
+        ". La Computadora jugó: " +
+        opcionComputadora +
+        ". " +
+        "\n" +
+        resultado +
+        "." +
+        "\n"
+    );
 
     /* Texto HTML del resumen de partidas */
     resultadoRonda +=
