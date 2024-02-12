@@ -41,6 +41,7 @@ function jugar() {
       marcadorJugador++;
     } else {
       resultado = "La computadora gana!";
+      marcadorComputadora++;
     }
     /* Alert de resultado inmediato de partida */
     alert(
