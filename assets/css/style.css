@@ -20,6 +20,18 @@ button {
         background-color: rgb(4, 90, 4);
     }
 }
+#formJugar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+}
+#inputJuegos {
+    height: 2rem;
+    width: 10rem;
+    
+}
 #resultado {
     font-size: 1.3rem;
     padding: 2rem;

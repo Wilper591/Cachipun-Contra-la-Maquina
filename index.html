@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Jorge Alberto Cerda Rodriguez" />
     <title>Desafío Cachipun contra la máquina</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <h1>Cachipun Contra la Máquina!</h1>
-    <p>Presiona el botón para empezar una partida:</p>
-    <button id="botonJugar" onclick="jugar()">Jugar</button>
+    <p>Ingresa un número de juegos y presiona Jugar</p>
+    <form id="formJugar">
+      <input
+        type="text"
+        id="inputJuegos"
+        placeholder=" Ingresa el n° de juegos"
+        min="1"
+        max="10"
+        
+      />
+      <button id="btnJugar" type="submit" form="formJugar" onclick="jugar()">
+        Jugar
+      </button>
+    </form>
+    <form id="formOpciones">
+      <button id="opcionPiedra" value="piedra" form="formOpciones">Piedra</button>
+      <button id="opcionPapel" value="papel" form="formOpciones">Papel</button>
+      <button id="opcionTijera" value="tijera" form="formOpciones">Tijera</button>
+    </form>
     <div id="resultado"></div>
     <div id="resultadoFinal"></div>
     <script src="./assets/js/index.js"></script>
