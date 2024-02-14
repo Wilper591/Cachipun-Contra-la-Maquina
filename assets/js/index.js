@@ -3,12 +3,14 @@ function jugar() {
   if (!Number(cantidadJuegos) || cantidadJuegos <= 0) {
     alert("Por favor, ingresa una cantidad de juegos válida");
   }
+  /* Bocle del promt en caso de que no se ingrese un número más de una vez */
   while (!Number(cantidadJuegos) || cantidadJuegos <= 0) {
     cantidadJuegos = parseInt(prompt("¿Cuántas veces quieres jugar?"));
     if (!Number(cantidadJuegos) || cantidadJuegos <= 0) {
       alert("Por favor, ingresa una cantidad de juegos válida");
     }
   }
+  /* Variables Globales */
   let opciones = ["piedra", "papel", "tijera"];
   let resultadoRonda = "";
   let resultadoFinal = "";
@@ -16,6 +18,7 @@ function jugar() {
   let marcadorComputadora = "";
   let i = 0;
 
+  /* Evaluador de condición WHILE */
   while (i < cantidadJuegos) {
     /* Jugada del jugador */
     let opcionJugador = prompt("Elige: piedra, papel o tijera").toLowerCase();
@@ -28,19 +31,20 @@ function jugar() {
     /* Jugada de la maquina */
     let opcionComputadora =
       opciones[Math.floor(Math.random() * opciones.length)];
+      /* Resultando de la ronda */
     let resultado = "";
     /* Reglas del juego */
     if (opcionJugador === opcionComputadora) {
-      resultado = "Es un Empate!";
+      resultado = "Esta ronda es un Empate!";
     } else if (
       (opcionJugador === "piedra" && opcionComputadora === "tijera") ||
       (opcionJugador === "papel" && opcionComputadora === "piedra") ||
       (opcionJugador === "tijera" && opcionComputadora === "papel")
     ) {
-      resultado = "Ganaste!";
+      resultado = "Ganaste la ronda!";
       marcadorJugador++;
     } else {
-      resultado = "La computadora gana!";
+      resultado = "La computadora gana la ronda!";
       marcadorComputadora++;
     }
     /* Alert de resultado inmediato de partida */
