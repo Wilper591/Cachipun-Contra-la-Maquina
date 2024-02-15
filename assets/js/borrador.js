@@ -4,7 +4,7 @@ btnJugar.addEventListener("click", function (e) {
   jugar();
 });
 function jugada() {
-  
+
 }
 function jugar() {
   let opciones = ["piedra", "papel", "tijera"];
@@ -17,10 +17,13 @@ function jugar() {
   /* Evaluador de condición WHILE */
   for (let i = 0; i < nroJuegos; i++) {
     /* Jugada del jugador */
-    let opcionJugador1 = document.getElementById(".btnPiedra");
-    let opcionJugador2 = document.getElementById(".btnPapel");
-    let opcionJugador3 = document.getElementById(".btnTijera");
-    opcionJugador1.addEventListener("click", jugada)
+    /* Jugada del jugador */
+    let opcionJugador = prompt("Elige: piedra, papel o tijera").toLowerCase();
+    while (!opciones.includes(opcionJugador)) {
+      opcionJugador = prompt(
+        "Opción inválida. Elige: piedra, papel o tijera"
+      ).toLowerCase();
+    }
     /* Jugada de la maquina */
     let opcionComputadora =
       opciones[Math.floor(Math.random() * opciones.length)];

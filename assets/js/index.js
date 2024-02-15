@@ -9,21 +9,19 @@ const tijera = document.getElementById("btnTijera");
 piedra.addEventListener("click", function (e) {
   e.preventDefault();
   jugada(e.target.value);
-  console.log(e.target.value);
 });
 papel.addEventListener("click", function (e) {
   e.preventDefault();
   jugada(e.target.value);
-  console.log(e.target.value);
 });
 tijera.addEventListener("click", function (e) {
   e.preventDefault();
   jugada(e.target.value);
-  console.log(e.target.value);
 });
-
 function jugada(opcion) {
-  console.log("Aqui se esta pulsando", opcion)
+  let opcionJugador = opcion;
+  console.log("Tu opción es", opcion);
+  return resultado;
 }
 function jugar() {
   let inputJuegos = document.getElementById("inputJuegos").value;
@@ -35,13 +33,13 @@ function jugar() {
   let nroJuegos = Number(inputJuegos);
   let errorMsj = document.getElementById("error");
   if (nroJuegos <= 0) {
-    errorMsj.textContent = "Ingresa una cantidad válida";
+    errorMsj.textContent = "Ingresa un numero entre 1 y 10";
   }
-
-  /* Evaluador de condición WHILE */
+  /* Bucle for que genera la cantidad de partidas ingresadas */
   for (let i = 0; i < nroJuegos; i++) {
     /* Jugada del jugador */
-
+    opcionJugador = resultado;
+    console.log(opcionJugador);
     /* Jugada de la maquina */
     let opcionComputadora =
       opciones[Math.floor(Math.random() * opciones.length)];
