@@ -1,8 +1,9 @@
-let inputJuegos = document.getElementById("inputJuegos").value;
-let nroJuegos = Number(inputJuegos);
-console.log(inputJuegos)
-console.log(nroJuegos)
-function jugar(e) {
+let btnJugar = document.getElementById("btnJugar");
+btnJugar.addEventListener("click", function(e) {
   e.preventDefault();
-  console.log("Ejecutando jugar()")
+  jugar();
+});
+function jugar() {
+  let inputJuegos = document.getElementById("inputJuegos").value;
+  console.log(inputJuegos);
 }
