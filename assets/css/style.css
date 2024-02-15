@@ -32,6 +32,11 @@ button {
     width: 10rem;
     
 }
+#error {
+    font-weight: bold;
+    font-size: 3rem;
+    color: red;
+}
 #resultado {
     font-size: 1.3rem;
     padding: 2rem;

@@ -12,7 +12,7 @@
     <p>Ingresa un número de juegos y presiona Jugar</p>
     <form id="formJugar">
       <input
-        type="text"
+        type="number"
         id="inputJuegos"
         placeholder=" Ingresa el n° de juegos"
         min="1"
@@ -23,10 +23,11 @@
       </button>
     </form>
     <form id="formOpciones">
-      <button id="btnPiedra" value="piedra" form="formOpciones">Piedra</button>
-      <button id="btnPapel" value="papel" form="formOpciones">Papel</button>
-      <button id="btnTijera" value="tijera" form="formOpciones">Tijera</button>
+      <button id="btnPiedra" class="btnOpcion" value="piedra" form="formOpciones">Piedra</button>
+      <button id="btnPapel" class="btnOpcion" value="papel" form="formOpciones">Papel</button>
+      <button id="btnTijera" class="btnOpcion" value="tijera" form="formOpciones">Tijera</button>
     </form>
+    <div id="error"></div>
     <div id="resultado"></div>
     <div id="resultadoFinal"></div>
     <script src="./assets/js/index.js"></script>
